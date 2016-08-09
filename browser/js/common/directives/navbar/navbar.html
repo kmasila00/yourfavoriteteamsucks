@@ -1,0 +1,43 @@
+<nav class="navbar navbar-inverse navbar-fixed-top ">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navie">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <capstone-logo></capstone-logo>
+    </div>
+
+    <div id="navie" class="navbar-collapse collapse">
+
+      <ul class="nav navbar-nav navbar-left">
+        <!-- nav links -->
+        <li ng-repeat="item in items" class="dropdown">
+          <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
+        </li>
+      </ul>
+
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <!-- user controls -->
+        <!-- logged in -->
+        <li ng-if="user" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user"></i>
+            &nbsp;{{ user.username }}&nbsp;
+            <i class="glyphicon glyphicon-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#" ui-sref="userProfile"><i class="fa fa-user"></i> Admin Page</a></li>
+            <li class="divider"></li>
+            <li><a href="#" ng-click="logout()"><i class="fa fa-sign-out"></i> Logout</a></li>
+           </ul>
+        </li>
+        <!-- not logged in -->
+        <li ng-if="!user"><a ui-sref="login">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

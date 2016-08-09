@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+#main {
+margin-top: 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+
+@import 'directives/main';
+@import 'home/main';
+@import 'login/main';
+@import 'admin/main';
