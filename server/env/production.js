@@ -7,7 +7,7 @@
  */
 
 module.exports = {
-    "DATABASE_URI": "postgres://znglmawteqhcwa:ht2aO04su5L6wVcjWxmWu9vMil@ec2-184-73-202-229.compute-1.amazonaws.com:5432/ddvtjj4f5jg34f",
+    "DATABASE_URI": "postgres://bmcghanhjxkvnd:tN4xjd80h3PDtc1ty2I_-Z4F1L@ec2-54-243-249-154.compute-1.amazonaws.com:5432/db7oo96pohk5uq",
     "SESSION_SECRET": "anythingYouWant",
     "LOGGING": true
 };
