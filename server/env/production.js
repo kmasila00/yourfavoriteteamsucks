@@ -7,17 +7,7 @@
  */
 
 module.exports = {
-    "DATABASE_URI": process.env.DATABASE_URI,
-    "SESSION_SECRET": process.env.SESSION_SECRET,
-    "FACEBOOK": {
-        "clientID": process.env.FACEBOOK_APP_ID,
-        "clientSecret": process.env.FACEBOOK_CLIENT_SECRET,
-        "callbackURL": process.env.FACEBOOK_CALLBACK_URL
-    },
-    "GOOGLE": {
-        "clientID": process.env.GOOGLE_CLIENT_ID,
-        "clientSecret": process.env.GOOGLE_CLIENT_SECRET,
-        "callbackURL": process.env.GOOGLE_CALLBACK_URL
-    },
+    "DATABASE_URI": "postgres://znglmawteqhcwa:ht2aO04su5L6wVcjWxmWu9vMil@ec2-184-73-202-229.compute-1.amazonaws.com:5432/ddvtjj4f5jg34f",
+    "SESSION_SECRET": "anythingYouWant",
     "LOGGING": true
 };
