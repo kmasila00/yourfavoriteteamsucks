@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top ">
+<nav class="navbar navbar-fixed-top ">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navie">
@@ -21,9 +21,25 @@
 
       <ul class="nav navbar-nav navbar-right">
 
+<!--       <li>
+        <a href="www.facebook.com">
+          <img height="50" width="50" src="images/facebook2.png"/>
+        </a>
+      </li>
+      <li>
+        <a href="www.instagram.com">
+          <img height="28" width="28" src="images/instagram2.jpeg"/>
+        </a>
+      </li>
+      <li>
+        <a href="www.padmintwitter.com">
+          <img height="40" width="40" src="images/twitter2.png"/>
+        </a>
+      </li> -->
+
         <!-- user controls -->
         <!-- logged in -->
-        <li ng-if="user" class="dropdown">
+<!--         <li ng-if="user" class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <i class="glyphicon glyphicon-user"></i>
             &nbsp;{{ user.username }}&nbsp;
@@ -34,10 +50,11 @@
             <li class="divider"></li>
             <li><a href="#" ng-click="logout()"><i class="fa fa-sign-out"></i> Logout</a></li>
            </ul>
-        </li>
+        </li> -->
         <!-- not logged in -->
-        <li ng-if="!user"><a ui-sref="login">Login</a></li>
+        <!-- <li ng-if="!user"><a ui-sref="login">Login</a></li> -->
       </ul>
+      
     </div>
   </div>
 </nav>

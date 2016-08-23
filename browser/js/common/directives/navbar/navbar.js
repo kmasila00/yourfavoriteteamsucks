@@ -9,8 +9,9 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
             scope.items = [
                 { label: 'RANKINGS', state: 'rankings'},
                 // { label: 'SERVICES', state: 'services'},
-                { label: 'ABOUT US', state: 'aboutUs'},
-                { label: 'CONTACT US', state: 'contactUs'}
+                { label: 'ABOUT US', state: 'about'},
+                { label: 'CONTACT US', state: 'contact'},
+                { label: 'PODCASTS', state: 'podcasts'}
             ];
 
             scope.isLoggedIn = function () {

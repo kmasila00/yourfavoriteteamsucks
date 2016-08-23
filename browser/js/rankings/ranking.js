@@ -1,6 +1,6 @@
 app.config(function($stateProvider){
 	$stateProvider.state('rankings',{
-		url: '/',
+		url: '/ranking',
 		templateUrl: 'js/rankings/ranking.html'
 	});
 });

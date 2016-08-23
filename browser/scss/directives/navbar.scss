@@ -1,48 +1,55 @@
 navbar {
 
+  #navie {
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+  
   display: block;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   box-shadow: 1px 1px 14px -3px black;
   margin-bottom: 90px;
 
   .navbar {
       margin-bottom: 0px;
-      padding-bottom: 20px;
-      background-color: black;
+      padding-bottom: 10px;
+      background-color: #333333;
       border-bottom: 5px solid black;
   }
 
   .container {
     width: 91%;
     max-width: 1340px;
-    padding-top: 20px;
+    padding-top: 5px;
   }
 
   capstone-logo {
-    margin-top: 5px;
+    margin-top: 0;
     margin-right: 20px;
-    height: 40px;
+    height: 60px;
     img {
-      max-width: 100%;
-      max-height: 100%;
+      max-width: 150%;
+      max-height: 150%;
       width: auto;
     }
   }
 
   a {
+    padding-top: 120px;
     color: white;
     font-size: 16px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
   }
 
   .nav > li > a {
     cursor: pointer;
     transition: color 0.2s;
     &.active {
-      color: darken(#00c0f0, 10%);
+      color:#3385ff;
     }
     &:hover {
       background: none;
-      color: #00c0f0;
     }
     &:focus {
       background: none;
