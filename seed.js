@@ -21,7 +21,6 @@ var chalk = require('chalk');
 var db = require('./server/db');
 var User = db.model('user');
 var Promise = require('sequelize').Promise;
-var seed = require('./seeds');
 
 var seedUsers = function () {
 
