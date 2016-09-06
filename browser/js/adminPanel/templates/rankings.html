@@ -1,0 +1,363 @@
+<section id="about">
+	<div class="container">
+		<ul class="nav nav-tabs">
+	        <li class="active"><a href="#tab1" data-toggle="tab">Quarter Backs</a></li>
+	        <li><a href="#tab2" data-toggle="tab">Wide Recievers</a></li>
+	        <li><a href="#tab3" data-toggle="tab">Running Backs</a></li>
+	        <li><a href="#tab4" data-toggle="tab">Tight Ends</a></li>
+	        <li><a href="#tab5" data-toggle="tab">Defenses</a></li>
+	        <li><a href="#tab6" data-toggle="tab">Kickers</a></li>
+	    </ul>
+		<div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Number</th>
+			    		<th>Player</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    		<th>Confirm</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="qb in qbs">
+			    		<td>{{ qb.Num }}</td>
+			    		<td><input type="text" ng-model="player"></td>
+		    		    <td><select class="form-control" ng-model="jason">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="jack">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="amoni">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="eddie">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="nick">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+			    		<td><button ng-click="change('qbs', qb.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+            <div class="tab-pane" id="tab2">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    		<th>Confirm</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="wr in wrs">
+			    		<td>{{ wr.Num }}</td>
+			    		<td><input type="text" ng-model="player"></td>
+		    		    <td><select class="form-control" ng-model="jason">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="jack">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="amoni">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="eddie">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="nick">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+			    		<td><button ng-click="change('wrs', wr.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+            <div class="tab-pane" id="tab3">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    		<th>Confirm</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="rb in rbs">
+			    		<td>{{ rb.Num }}</td>
+			    		<td><input type="text" ng-model="player"></td>
+		    		    <td><select class="form-control" ng-model="jason">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="jack">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="amoni">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="eddie">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="nick">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+			    		<td><button ng-click="change('rbs', rb.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+            <div class="tab-pane" id="tab4">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    		<th>Confirm</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="te in tes">
+			    		<td>{{ te.Num }}</td>
+			    		<td><input type="text" ng-model="player"></td>
+		    		    <td><select class="form-control" ng-model="jason">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="jack">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="amoni">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="eddie">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="nick">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+			    		<td><button ng-click="change('tes', te.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+            <div class="tab-pane" id="tab5">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    		<th>Confirm</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="def in defs">
+			    		<td>{{ def.Num }}</td>
+			    		<td><input type="text" ng-model="player"></td>
+		    		    <td><select class="form-control" ng-model="jason">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="jack">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="amoni">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="eddie">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="nick">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+			    		<td><button ng-click="change('defs', def.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+            <div class="tab-pane" id="tab6">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    		<th>Confirm</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="k in ks">
+			    		<td>{{ k.Num }}</td>
+			    		<td><input type="text" ng-model="player"></td>
+		    		    <td><select class="form-control" ng-model="jason">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="jack">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="amoni">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="eddie">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+					    <td><select class="form-control" ng-model="nick">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select></td>
+			    		<td><button ng-click="change('ks', k.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+        </div>
+	</div>
+</section>

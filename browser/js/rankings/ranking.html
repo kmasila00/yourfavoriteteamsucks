@@ -1,67 +1,176 @@
 <section id="ranking">
-	<ul class="container nav nav-tabs">
-	  <li role="presentation" class="active"><a href="#">QB</a></li>
-	  <li role="presentation"><a href="#">WR</a></li>
-	  <li role="presentation"><a href="#">RB</a></li>
-	  <li role="presentation"><a href="#">TE</a></li>
-	  <li role="presentation"><a href="#">DEF</a></li>
-	  <li role="presentation"><a href="#">K</a></li>
-	</ul>
 	<div class="container">
-		<table class="table table-striped">
-	    <thead>
-	    	<tr>
-	    		<th>Player</th>
-	    		<th>Jason</th>
-	    		<th>Jack</th>
-	    		<th>Amoni</th>
-	    		<th>Eddie</th>
-	    		<th>Nick</th>
-	    	</tr>
-	    </thead>
-	    <tbody>
-	    	<tr>
-	    		<td>This Player</td>
-	    		<td>Jason's Comment</td>
-	    		<td>Jack's Comment</td>
-	    		<td>Amonis Comment</td>
-	    		<td>Eddie's Comment</td>
-	    		<td>Nick's Comment</td>
-	    	</tr>
-	    	<tr>
-	    		<td>This Player</td>
-	    		<td>Jason's Comment</td>
-	    		<td>Jack's Comment</td>
-	    		<td>Amonis Comment</td>
-	    		<td>Eddie's Comment</td>
-	    		<td>Nick's Comment</td>
-	    	</tr>
-	    	<tr>
-	    		<td>This Player</td>
-	    		<td>Jason's Comment</td>
-	    		<td>Jack's Comment</td>
-	    		<td>Amonis Comment</td>
-	    		<td>Eddie's Comment</td>
-	    		<td>Nick's Comment</td>
-	    	</tr>
-	    	<tr>
-	    		<td>This Player</td>
-	    		<td>Jason's Comment</td>
-	    		<td>Jack's Comment</td>
-	    		<td>Amonis Comment</td>
-	    		<td>Eddie's Comment</td>
-	    		<td>Nick's Comment</td>
-	    	</tr>
-	    	<tr>
-	    		<td>This Player</td>
-	    		<td>Jason's Comment</td>
-	    		<td>Jack's Comment</td>
-	    		<td>Amonis Comment</td>
-	    		<td>Eddie's Comment</td>
-	    		<td>Nick's Comment</td>
-	    	</tr>
-	    </tbody>
-
-	  </table>
+		<ul class="nav nav-tabs">
+	        <li class="active"><a href="#tab1" data-toggle="tab">Quarter Backs</a></li>
+	        <li><a href="#tab2" data-toggle="tab">Wide Recievers</a></li>
+	        <li><a href="#tab3" data-toggle="tab">Running Backs</a></li>
+	        <li><a href="#tab4" data-toggle="tab">Tight Ends</a></li>
+	        <li><a href="#tab5" data-toggle="tab">Defenses</a></li>
+	        <li><a href="#tab6" data-toggle="tab">Kickers</a></li>
+	    </ul>
+		<div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Average</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="qb in qbs">
+			    		<td>{{ qb.Player }}</td>
+			    		<td>{{ qb.Avg }}</td>
+			    		<td>{{ qb.Jason }}</td>
+			    		<td>{{ qb.Jack }}</td>
+			    		<td>{{ qb.Amoni }}</td>
+			    		<td>{{ qb.Eddie }}</td>
+			    		<td>{{ qb.Nick }}</td>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+            <div class="tab-pane" id="tab2">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Average</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="wr in wrs">
+			    		<td>{{ wr.Player }}</td>
+			    		<td>{{ wr.Avg }}</td>
+			    		<td>{{ wr.Jason }}</td>
+			    		<td>{{ wr.Jack }}</td>
+			    		<td>{{ wr.Amoni }}</td>
+			    		<td>{{ wr.Eddie }}</td>
+			    		<td>{{ wr.Nick }}</td>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+            <div class="tab-pane" id="tab3">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Average</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="rb in rbs">
+			    		<td>{{ rb.Player }}</td>
+			    		<td>{{ rb.Avg }}</td>
+			    		<td>{{ rb.Jason }}</td>
+			    		<td>{{ rb.Jack }}</td>
+			    		<td>{{ rb.Amoni }}</td>
+			    		<td>{{ rb.Eddie }}</td>
+			    		<td>{{ rb.Nick }}</td>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+            <div class="tab-pane" id="tab4">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Average</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="te in tes">
+			    		<td>{{ te.Player }}</td>
+			    		<td>{{ te.Avg }}</td>
+			    		<td>{{ te.Jason }}</td>
+			    		<td>{{ te.Jack }}</td>
+			    		<td>{{ te.Amoni }}</td>
+			    		<td>{{ te.Eddie }}</td>
+			    		<td>{{ te.Nick }}</td>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+            <div class="tab-pane" id="tab5">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Average</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="def in defs">
+			    		<td>{{ def.Player }}</td>
+			    		<td>{{ def.Avg }}</td>
+			    		<td>{{ def.Jason }}</td>
+			    		<td>{{ def.Jack }}</td>
+			    		<td>{{ def.Amoni }}</td>
+			    		<td>{{ def.Eddie }}</td>
+			    		<td>{{ def.Nick }}</td>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+            <div class="tab-pane" id="tab6">
+				<table class="table table-striped">
+			    <thead>
+			    	<tr>
+			    		<th>Player</th>
+			    		<th>Average</th>
+			    		<th>Jason</th>
+			    		<th>Jack</th>
+			    		<th>Amoni</th>
+			    		<th>Eddie</th>
+			    		<th>Nick</th>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="k in ks">
+			    		<td>{{ k.Player }}</td>
+			    		<td>{{ k.Avg }}</td>
+			    		<td>{{ k.Jason }}</td>
+			    		<td>{{ k.Jack }}</td>
+			    		<td>{{ k.Amoni }}</td>
+			    		<td>{{ k.Eddie }}</td>
+			    		<td>{{ k.Nick }}</td>
+			    	</tr>
+			    </tbody>
+			    </table>
+                
+            </div>
+        </div>
 	</div>
 </section>

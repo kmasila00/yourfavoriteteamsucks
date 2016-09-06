@@ -1,0 +1,27 @@
+<section id="addArt">
+	<div class="container">
+
+		<h1>ADD ARTICLE</h1>
+		
+	 	<form>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Title</label>
+		    <input ng-model="title" class="form-control" placeholder="Enter title">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Author</label>
+		    <input ng-model="author" class="form-control" placeholder="Enter Author">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Image URL</label>
+		    <input ng-model="imageUrl" class="form-control" placeholder="Enter Image Url">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleTextarea">Text</label>
+		    <textarea ng-model="text" class="form-control" rows="3"></textarea>
+		  </div>
+		  <button ng-click="submit()" class="btn btn-primary">Submit</button>
+		</form>
+
+	</div>
+</section>

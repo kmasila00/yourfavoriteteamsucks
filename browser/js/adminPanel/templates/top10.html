@@ -1,0 +1,38 @@
+<section id="admin">
+	<div class="container">
+		
+		<h1>CHANGE TOP 10</h1>
+
+		<div style="padding-bottom:10px;">
+			<div class="panel panel-default">
+			  <!-- Default panel contents -->
+			  <div class="panel-heading">Top 10 Fantasy Players of the Week</div>
+			  <div class="panel-body">
+			    <p>If you have these players, they better be starting for your team!</p>
+			  </div>
+
+			  <!-- Table -->
+			  <table class="table">
+			    <thead>
+			        <tr>
+			            <th>#</th>
+			            <th>Player</th>
+			            <th>Opp</th>
+			            <th>Confirm</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr ng-repeat="item in list">
+			            <td>{{ item.Num }}</td>
+			            <td><input type="text" ng-model="player"></td>
+			            <td><input type="text" ng-model="opp"></td>
+						<td><button ng-click="change(item.Num, player, opp)" class="btn btn-primary">CHANGE</button></td>
+			        </tr>
+			    </tbody>
+
+			  </table>
+			</div>
+		</div>
+		
+	</div>
+</section>

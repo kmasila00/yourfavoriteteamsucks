@@ -1,5 +1,5 @@
 module.exports = {
-  "DATABASE_URI": "postgres://localhost:5432/learnGraph",
+  "DATABASE_URI": "postgres://localhost:5432/yfts",
   "SESSION_SECRET": "Optimus Prime is my real dad",
   "FACEBOOK": {
     "clientID": "1126186280772613",

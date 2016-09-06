@@ -10,7 +10,6 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
                 { label: 'RANKINGS', state: 'rankings'},
                 // { label: 'SERVICES', state: 'services'},
                 { label: 'ABOUT US', state: 'about'},
-                { label: 'CONTACT US', state: 'contact'},
                 { label: 'PODCASTS', state: 'podcasts'}
             ];
 

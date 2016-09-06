@@ -4,6 +4,9 @@ var router = require('express').Router();
 module.exports = router;
 
 //router.use('/users', require('./user'));
+router.use('/article', require('./article'));
+router.use('/top10', require('./top10'));
+router.use('/rankings', require('./rankings'));
 
 // Make sure this is after all of
 // the registered routes!

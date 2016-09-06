@@ -6,24 +6,43 @@
 				<carousel></carousel>
 
 				<div class="list-group">
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">List group item heading</h4>
-				    <p class="list-group-item-text">some text</p>
-				  </a>
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">List group item heading</h4>
-				    <p class="list-group-item-text">some text</p>
-				  </a>
-				  <a href="#" class="list-group-item">
-				    <h4 class="list-group-item-heading">List group item heading</h4>
-				    <p class="list-group-item-text">some text</p>
+				  <a ui-sref="article({ articleId:article.id })" ng-repeat="article in articles" class="list-group-item">
+				    <h4 class="list-group-item-heading">{{ article.Title }}</h4>
+				    <p class="list-group-item-text">By: {{ article.Author }}</p>
 				  </a>
 				</div>
 
 
 			</div>
+
+			<!-- TOP 10 -->
 			<div class="col-lg-3">
-				<top10></top10>
+				<div class="panel panel-default">
+				  <!-- Default panel contents -->
+				  <div class="panel-heading">Top 10 Fantasy Players of the Week</div>
+				  <div class="panel-body">
+				    <p>If you have these players, they better be starting for your team!</p>
+				  </div>
+
+				  <!-- Table -->
+				  <table class="table">
+				    <thead>
+				        <tr>
+				            <th>#</th>
+				            <th>Player</th>
+				            <th>Opp</th>
+				        </tr>
+				    </thead>
+				    <tbody>
+				        <tr ng-repeat="item in list">
+				            <td>{{ item.Num }}</td>
+				            <td>{{ item.Player }}</td>
+				            <td>{{ item.Opp }}</td>
+				        </tr>
+				    </tbody>
+
+				  </table>
+				</div>
 			</div>
 			
 		</div>
