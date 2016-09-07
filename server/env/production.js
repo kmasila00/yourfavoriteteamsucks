@@ -7,7 +7,7 @@
  */
 
 module.exports = {
-    "DATABASE_URI": "postgres://localhost:5432/yfts",
-    "SESSION_SECRET": "anythingYouWant",
+    "DATABASE_URI": process.env.DATABASE_URI,
+    "SESSION_SECRET": process.env.SESSION_SECRET,
     "LOGGING": true
 };
