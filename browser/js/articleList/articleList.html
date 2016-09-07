@@ -1,0 +1,18 @@
+<section id="about">
+	<div class="container">
+		<center>
+			<h1>Articles By {{ author }}</h1>
+			<img height="300" width="300" src="{{ i }}"/>
+		</center>
+
+		<hr>
+
+	  	<div ng-repeat="article in articles" class="list-group-item">
+		  	<a ui-sref="article({ articleId:article.id })">
+    		  <h3>{{ article.Title }}</h3>
+    		  <p>{{ article.Date }}</p>
+		  	</a>
+		 </div>
+
+	</div>
+</section>

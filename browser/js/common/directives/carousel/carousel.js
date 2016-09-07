@@ -12,12 +12,13 @@ app.directive('carousel', function($rootScope, ArticleFactory){
 
 			ArticleFactory.fetchAll()
 			.then(function(articles){
-				allArticles = articles;
+				scope.welcome = articles[0];
+				allArticles = articles.slice(1);
 
 				if(allArticles.length > 5){
-					cArticles = allArticles.slice(allArticles.length - 5);
+					cArticles = allArticles.slice(allArticles.length - 5).reverse();
 				} else {
-					cArticles = allArticles.slice();
+					cArticles = allArticles.slice().reverse();
 					scope.cArticles = cArticles;
 				}
 
@@ -26,9 +27,6 @@ app.directive('carousel', function($rootScope, ArticleFactory){
 						scope.dots.push(i+1);
 					}
 				// }
-
-				console.log(cArticles.length);
-				console.log(scope.dots);
 
 			})
 

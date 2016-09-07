@@ -22,6 +22,7 @@ var db = require('./server/db');
 var User = db.model('user');
 var Top10 = db.model('top10');
 var Rankings = db.model('rankings');
+var Article = db.model('article');
 var Promise = require('sequelize').Promise;
 
 var seedUsers = function () {
@@ -29,8 +30,8 @@ var seedUsers = function () {
     var users = [
         {
             username: 'YFTS',
-            email: 'kmasila00@gmail.com',
-            password: 'kelvin',
+            email: 'yfts@gmail.com',
+            password: '36cansofcoke',
             isAdmin: true
         }
     ];
@@ -39,6 +40,25 @@ var seedUsers = function () {
         return User.create(userObj);
     });
     return Promise.all(creatingUsers);
+
+};
+
+var seedWelcome = function () {
+
+    var welcome = [
+        {
+            Title: 'Welcome To YFTS',
+            Author: 'Jason Olivo',
+            Date: '09/01/16',
+            Text: 'First off we would like to thank you for visiting our site and if you are here by accident please don’t leave. Welcome to Yourfavoriteteamssucks.com, the official website for the Your Favorite Team Sucks podcast. We are just a couple of New Yorkers that would like to think we know what we are talking about. We are going to be with you throughout the fantasy season giving you our thoughts and advice. We look forward to you interweb travelers tuning in to our podcast and check our weekly rankings throughout the season. Our goal is to get you that extra win that will catapult you into the playoffs and to a fantasy championship.',
+            Image: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/14102671_172992229800007_5932486622695628935_n.png?oh=a00e465557a87bf100ee98b835f72a35&oe=58827057'
+        }
+    ];
+
+    var creatingWelcome = welcome.map(function (welcomeObj) {
+        return Article.create(welcomeObj);
+    });
+    return Promise.all(creatingWelcome);
 
 };
 
@@ -156,6 +176,9 @@ var seedKs = function(){
 db.sync({ force: true })
     .then(function () {
       return seedUsers();
+    })
+    .then(function(){
+        return seedWelcome();
     })
     .then(function () {
       return seedTop10();

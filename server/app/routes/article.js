@@ -25,6 +25,18 @@ router.get('/:id', function(req,res,next){
 	})
 })
 
+router.get('/author/:author', function(req,res,next){
+	console.log(req.params.author);
+	Article.findAll({
+		where:{
+			Author: req.params.author
+		}
+	})
+	.then(function(articles){
+		res.status(200).send(articles);
+	})
+})
+
 router.post('/', function(req,res,next){
 	Article.create(req.body)
 	.then(function(){

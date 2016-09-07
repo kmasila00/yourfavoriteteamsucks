@@ -20,7 +20,7 @@ app.config(function ($stateProvider) {
         templateUrl: 'js/adminPanel/templates/article.html',
         controller: function ($scope, ArticleFactory, $state) {
           $scope.submit = function(){
-            ArticleFactory.addArticle($scope.title, $scope.author, $scope.imageUrl, $scope.text)
+            ArticleFactory.addArticle($scope.title, $scope.author, $scope.date, $scope.imageUrl, $scope.text)
             alert('Article Added!');
             $state.go('admin');
           }
