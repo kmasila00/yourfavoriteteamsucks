@@ -10,9 +10,9 @@
 <div class="carousel-inner" role="listbox">
 	<div class="item active">
 		<center>
-			<img height="400" width="400"src="{{ welcome.Image }}">
+			<a ui-sref="article({ articleId:welcome.id })"><img height="400" width="400"src="{{ welcome.Image }}"></a>
 			<div class="carousel-caption">
-				<a style="color:blue;" ui-sref="article({ articleId:welcome.id })"><h1>{{ welcome.Title }}</h1></a>
+				
 			</div>
 		</center>
 	</div>
