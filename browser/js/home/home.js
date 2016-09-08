@@ -25,7 +25,7 @@ app.controller('homeCtrl', function($scope, Top10Factory, ArticleFactory){
 
 	ArticleFactory.fetchAll()
 	.then(function(articles){
-		$scope.articles = articles;
+		$scope.articles = articles.reverse();
 	})
 
 })
