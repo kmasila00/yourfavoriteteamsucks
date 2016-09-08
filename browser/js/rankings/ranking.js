@@ -13,10 +13,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	RankingsFactory.fetchPos('qbs')
 	.then(function(qbs){
 		qbs.sort(function (a, b) {
-		  if (a.Avg > b.Avg) {
+		  if (Number(a.Avg) > Number(b.Avg)) {
 		    return -1;
 		  }
-		  if (a.Avg < b.Avg) {
+		  if (Number(a.Avg) < Number(b.Avg)) {
 		    return 1;
 		  }
 		  // a must be equal to b
@@ -28,10 +28,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	RankingsFactory.fetchPos('wrs')
 	.then(function(wrs){
 		wrs.sort(function (a, b) {
-		  if (a.Avg > b.Avg) {
+		  if (Number(a.Avg) > Number(b.Avg)) {
 		    return -1;
 		  }
-		  if (a.Avg < b.Avg) {
+		  if (Number(a.Avg) < Number(b.Avg)) {
 		    return 1;
 		  }
 		  // a must be equal to b
@@ -43,10 +43,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	RankingsFactory.fetchPos('rbs')
 	.then(function(rbs){
 		rbs.sort(function (a, b) {
-		  if (a.Avg > b.Avg) {
+		  if (Number(a.Avg) > Number(b.Avg)) {
 		    return -1;
 		  }
-		  if (a.Avg < b.Avg) {
+		  if (Number(a.Avg) < Number(b.Avg)) {
 		    return 1;
 		  }
 		  // a must be equal to b
@@ -58,10 +58,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	RankingsFactory.fetchPos('tes')
 	.then(function(tes){
 		tes.sort(function (a, b) {
-		  if (a.Avg > b.Avg) {
+		  if (Number(a.Avg) > Number(b.Avg)) {
 		    return -1;
 		  }
-		  if (a.Avg < b.Avg) {
+		  if (Number(a.Avg) < Number(b.Avg)) {
 		    return 1;
 		  }
 		  // a must be equal to b
@@ -73,10 +73,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	RankingsFactory.fetchPos('defs')
 	.then(function(defs){
 		defs.sort(function (a, b) {
-		  if (a.Avg > b.Avg) {
+		  if (Number(a.Avg) > Number(b.Avg)) {
 		    return -1;
 		  }
-		  if (a.Avg < b.Avg) {
+		  if (Number(a.Avg) < Number(b.Avg)) {
 		    return 1;
 		  }
 		  // a must be equal to b
@@ -88,10 +88,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	RankingsFactory.fetchPos('ks')
 	.then(function(ks){
 		ks.sort(function (a, b) {
-		  if (a.Avg > b.Avg) {
+		  if (Number(a.Avg) > Number(b.Avg)) {
 		    return -1;
 		  }
-		  if (a.Avg < b.Avg) {
+		  if (Number(a.Avg) < Number(b.Avg)) {
 		    return 1;
 		  }
 		  // a must be equal to b
