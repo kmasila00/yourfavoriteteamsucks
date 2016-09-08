@@ -25,7 +25,8 @@
 			    <tbody>
 			    	<tr ng-repeat="qb in qbs">
 			    		<td>{{ qb.Player }}</td>
-			    		<td>{{ qb.Avg }}</td>
+			    		<td ng-if="{{ qb.Avg }} !== 100">{{ qb.Avg }}</td>
+			    		<td ng-if="{{ qb.Avg }} === 100">--</td>
 			    		<td>{{ qb.Jason }}</td>
 			    		<td>{{ qb.Jack }}</td>
 			    		<td>{{ qb.Amoni }}</td>

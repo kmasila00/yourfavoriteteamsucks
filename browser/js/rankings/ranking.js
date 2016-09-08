@@ -22,7 +22,9 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 		  // a must be equal to b
 		  return 0;
 		});
+		
 		$scope.qbs = qbs.slice(0,30);
+
 	})
 
 	RankingsFactory.fetchPos('wrs')
