@@ -14,7 +14,6 @@ app.config(function($stateProvider){
 			else if(a === 'Nicholas Brosnan') $scope.i = 'images/nick.jpg';
 			else $scope.i = 'images/guest.png';
 
-
 			ArticleFactory.fetchByAuthor($stateParams.author)
 			.then(function(articles){
 				$scope.articles = articles;
