@@ -59,7 +59,12 @@
 			    <tbody>
 			    	<tr ng-repeat="wr in wrs">
 			    		<td>{{ wr.Num }}</td>
-			    		<td><input type="text" ng-model="player"></td>
+			    		<td ng-if="wr.Player === 'playerName'">
+			    			<input type="text" ng-model="player">
+			    		</td>
+			    		<td ng-if="wr.Player !== 'playerName'">
+			    			<label>{{ wr.Player }}</label>
+			    		</td>
 		    		    <td><input type="text" ng-model="jason"></td>
 					    <td><input type="text" ng-model="jack"></td>
 					    <td><input type="text" ng-model="amoni"></td>
@@ -87,7 +92,12 @@
 			    <tbody>
 			    	<tr ng-repeat="rb in rbs">
 			    		<td>{{ rb.Num }}</td>
-			    		<td><input type="text" ng-model="player"></td>
+			    		<td ng-if="rb.Player === 'playerName'">
+			    			<input type="text" ng-model="player">
+			    		</td>
+			    		<td ng-if="rb.Player !== 'playerName'">
+			    			<label>{{ rb.Player }}</label>
+			    		</td>
 		    		    <td><input type="text" ng-model="jason"></td>
 					    <td><input type="text" ng-model="jack"></td>
 					    <td><input type="text" ng-model="amoni"></td>
@@ -115,7 +125,12 @@
 			    <tbody>
 			    	<tr ng-repeat="te in tes">
 			    		<td>{{ te.Num }}</td>
-			    		<td><input type="text" ng-model="player"></td>
+			    		<td ng-if="te.Player === 'playerName'">
+			    			<input type="text" ng-model="player">
+			    		</td>
+			    		<td ng-if="te.Player !== 'playerName'">
+			    			<label>{{ te.Player }}</label>
+			    		</td>
 		    		    <td><input type="text" ng-model="jason"></td>
 					    <td><input type="text" ng-model="jack"></td>
 					    <td><input type="text" ng-model="amoni"></td>
@@ -143,7 +158,12 @@
 			    <tbody>
 			    	<tr ng-repeat="def in defs">
 			    		<td>{{ def.Num }}</td>
-			    		<td><input type="text" ng-model="player"></td>
+			    		<td ng-if="def.Player === 'playerName'">
+			    			<input type="text" ng-model="player">
+			    		</td>
+			    		<td ng-if="def.Player !== 'playerName'">
+			    			<label>{{ def.Player }}</label>
+			    		</td>
 		    		    <td><input type="text" ng-model="jason"></td>
 					    <td><input type="text" ng-model="jack"></td>
 					    <td><input type="text" ng-model="amoni"></td>
@@ -171,7 +191,12 @@
 			    <tbody>
 			    	<tr ng-repeat="k in ks">
 			    		<td>{{ k.Num }}</td>
-			    		<td><input type="text" ng-model="player"></td>
+			    		<td ng-if="k.Player === 'playerName'">
+			    			<input type="text" ng-model="player">
+			    		</td>
+			    		<td ng-if="k.Player !== 'playerName'">
+			    			<label>{{ k.Player }}</label>
+			    		</td>
 		    		    <td><input type="text" ng-model="jason"></td>
 					    <td><input type="text" ng-model="jack"></td>
 					    <td><input type="text" ng-model="amoni"></td>
