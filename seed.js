@@ -81,8 +81,8 @@ var seedQBs = function () {
 
     var qbs = [];
 
-    for(var i = 0; i < 20; i++){
-        qbs.push({ Pos:'QB', Num:i+1, Avg:0, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
+    for(var i = 0; i < 50; i++){
+        qbs.push({ Pos:'QB', Num:i+1, Avg:100, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
     }
 
     var creatingQBs = qbs.map(function (rowObj) {
@@ -97,8 +97,8 @@ var seedRBs = function(){
 
     var rbs = [];
 
-    for(var i = 0; i < 20; i++){
-        rbs.push({ Pos:'RB', Num:i+1, Avg:0, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
+    for(var i = 0; i < 50; i++){
+        rbs.push({ Pos:'RB', Num:i+1, Avg:100, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
     }
 
     var creatingRBs = rbs.map(function (rowObj) {
@@ -113,8 +113,8 @@ var seedWRs = function(){
 
     var wrs = [];
 
-    for(var i = 0; i < 20; i++){
-        wrs.push({ Pos:'WR', Num:i+1, Avg:0, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
+    for(var i = 0; i < 50; i++){
+        wrs.push({ Pos:'WR', Num:i+1, Avg:100, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
     }
 
     var creatingWRs = wrs.map(function (rowObj) {
@@ -129,8 +129,8 @@ var seedTEs = function(){
 
     var tes = [];
 
-    for(var i = 0; i < 20; i++){
-        tes.push({ Pos:'TE', Num:i+1, Avg:0, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
+    for(var i = 0; i < 50; i++){
+        tes.push({ Pos:'TE', Num:i+1, Avg:100, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
     }
 
     var creatingTEs = tes.map(function (rowObj) {
@@ -145,8 +145,8 @@ var seedDEFs = function(){
 
     var defs = [];
 
-    for(var i = 0; i < 20; i++){
-        defs.push({ Pos:'DEF', Num:i+1, Avg:0, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
+    for(var i = 0; i < 32; i++){
+        defs.push({ Pos:'DEF', Num:i+1, Avg:100, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
     }
 
     var creatingDEFs = defs.map(function (rowObj) {
@@ -161,8 +161,8 @@ var seedKs = function(){
 
     var ks = [];
 
-    for(var i = 0; i < 20; i++){
-        ks.push({ Pos:'K', Num:i+1, Avg:0, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
+    for(var i = 0; i < 50; i++){
+        ks.push({ Pos:'K', Num:i+1, Avg:100, Player:'playerName', Jason: 0, Jack: 0, Amoni: 0, Eddie: 0, Nick: 0 });
     }
 
     var creatingKs = ks.map(function (rowObj) {

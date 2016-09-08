@@ -14,90 +14,90 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	.then(function(qbs){
 		qbs.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  // a must be equal to b
 		  return 0;
 		});
-		$scope.qbs = qbs;
+		$scope.qbs = qbs.slice(0,30);
 	})
 
 	RankingsFactory.fetchPos('wrs')
 	.then(function(wrs){
 		wrs.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  // a must be equal to b
 		  return 0;
 		});
-		$scope.wrs = wrs;
+		$scope.wrs = wrs.slice(0,30);
 	})
 
 	RankingsFactory.fetchPos('rbs')
 	.then(function(rbs){
 		rbs.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  // a must be equal to b
 		  return 0;
 		});
-		$scope.rbs = rbs;
+		$scope.rbs = rbs.slice(0,30);
 	})
 
 	RankingsFactory.fetchPos('tes')
 	.then(function(tes){
 		tes.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  // a must be equal to b
 		  return 0;
 		});
-		$scope.tes = tes;
+		$scope.tes = tes.slice(0,30);
 	})
 
 	RankingsFactory.fetchPos('defs')
 	.then(function(defs){
 		defs.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  // a must be equal to b
 		  return 0;
 		});
-		$scope.defs = defs;
+		$scope.defs = defs.slice(0,30);
 	})
 
 	RankingsFactory.fetchPos('ks')
 	.then(function(ks){
 		ks.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  // a must be equal to b
 		  return 0;
 		});
-		$scope.ks = ks;
+		$scope.ks = ks.slice(0,30);
 	})
 
 })
