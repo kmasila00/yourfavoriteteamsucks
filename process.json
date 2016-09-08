@@ -1,9 +1,9 @@
 {
   "apps" : [
     {
-      "name"        : "worker",
-      "script"      : "./worker.js",
-      "exec_mode"   : "clister",
+      "name"        : "YFTS",
+      "script"      : "server/start.js",
+      "exec_mode"   : "cluster",
       "watch"       : true,
       "autorestart" : true,
       "env": {
