@@ -11,7 +11,7 @@ app.config(function($stateProvider){
 			else if(a === 'Jack Li') $scope.i = 'images/jack.jpg';
 			else if(a === 'Amoni Wells') $scope.i = 'images/amoni.jpg';
 			else if(a === 'Eddie Torres') $scope.i = 'images/eddie.jpg';
-			else if(a === 'Nicholas Brosnan') $scope.i = 'images/nick.jpg';
+			else (a === 'Nicholas Brosnan') $scope.i = 'images/nick.jpg';
 			// else $scope.i = 'images/guest.png';
 
 			ArticleFactory.fetchByAuthor($stateParams.author)
