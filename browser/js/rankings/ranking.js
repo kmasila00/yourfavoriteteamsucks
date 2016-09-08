@@ -14,10 +14,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	.then(function(qbs){
 		qbs.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  // a must be equal to b
 		  return 0;
@@ -29,10 +29,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	.then(function(wrs){
 		wrs.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  // a must be equal to b
 		  return 0;
@@ -44,10 +44,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	.then(function(rbs){
 		rbs.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  // a must be equal to b
 		  return 0;
@@ -59,10 +59,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	.then(function(tes){
 		tes.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  // a must be equal to b
 		  return 0;
@@ -74,10 +74,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	.then(function(defs){
 		defs.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  // a must be equal to b
 		  return 0;
@@ -89,10 +89,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 	.then(function(ks){
 		ks.sort(function (a, b) {
 		  if (a.Avg > b.Avg) {
-		    return 1;
+		    return -1;
 		  }
 		  if (a.Avg < b.Avg) {
-		    return -1;
+		    return 1;
 		  }
 		  // a must be equal to b
 		  return 0;
