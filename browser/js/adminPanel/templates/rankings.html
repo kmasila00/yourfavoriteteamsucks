@@ -26,7 +26,12 @@
 			    <tbody>
 			    	<tr ng-repeat="qb in qbs">
 			    		<td>{{ qb.Num }}</td>
-			    		<td><input type="text" ng-model="player"></td>
+			    		<td ng-if="qb.Player === 'playerName'">
+			    			<input type="text" ng-model="player">
+			    		</td>
+			    		<td ng-if="qb.Player !== 'playerName'">
+			    			<label>{{ qb.Player }}</label>
+			    		</td>
 		    		    <td><input type="text" ng-model="jason" value="100"></td>
 					    <td><input type="text" ng-model="jack" value="100"></td>
 					    <td><input type="text" ng-model="amoni" value="100"></td>

@@ -10,7 +10,7 @@ app.factory('RankingsFactory', function($http){
 				var check = res.data;
 				for(var i = 0; i < check.length; i++){
 					for(var key in check[i]){
-						if (Number(check[i][key]) === 21 || Number(check[i][key]) === 0 || check[i][key] === 'playerName') check[i][key] = "--";
+						if (Number(check[i][key]) === 99 || Number(check[i][key]) === 0) check[i][key] = "--";
 					}
 				}
 				return res.data;

@@ -30,6 +30,7 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 			qbs[i].Rank = i+1;
 			if(Number(qbs[i].Avg) === 100){
 				$scope.qbs = qbs.slice(0,i);
+				console.log($scope.qbs);
 				break;
 			} 
 		}
