@@ -23,7 +23,12 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 		  return 0;
 		});
 		
-		$scope.qbs = qbs.slice(0,30);
+		for(var i = 0; i < qbs.length; i++){
+			if(Number(qbs[i].Avg) === 100){
+				$scope.qbs = qbs.slice(0,i);
+				break;
+			} 
+		}
 
 	})
 
