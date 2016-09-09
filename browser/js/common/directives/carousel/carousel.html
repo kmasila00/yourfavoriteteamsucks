@@ -1,4 +1,4 @@
-<div id="my-slider" class="carousel slide" data-interval="2000" data-ride="carousel">
+<div id="my-slider" class="carousel slide" data-interval="4000" data-ride="carousel">
 	
 <!-- indicators dot nav -->
 <ol class="carousel-indicators">
@@ -10,7 +10,7 @@
 <div class="carousel-inner" role="listbox">
 	<div class="item active">
 		<center>
-			<a ui-sref="article({ articleId:welcome.id })"><img height="400" width="400"src="{{ welcome.Image }}"></a>
+			<a ui-sref="article({ articleId:welcome.id })"><img height="400" width="400" src="{{ welcome.Image }}"></a>
 			<div class="carousel-caption">
 				
 			</div>
@@ -26,12 +26,13 @@
 	</div>
 </div>
 
+
 <!-- controls -->
 <a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
-	<!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
+	<span style="color:black;" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 </a>
-<a class="right carousel-control" href="#my-slider" role="button" data-slide="next">
-	<!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
+<a id="start" class="right carousel-control" href="#my-slider" role="button" data-slide="next">
+	<span style="color:black;" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 </a>
 
 </div>
