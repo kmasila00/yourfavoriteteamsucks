@@ -6,7 +6,7 @@ app.config(function($stateProvider){
 	});
 });
 
-app.controller('rankingsCtrl', function($scope, RankingsFactory){
+app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 
 	var qbs, wrs, rbs, tes, defs, k;
 
@@ -32,7 +32,28 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory){
 			} 
 		}
 
+		console.log($scope.qbs);
+
 	})
+
+	$scope.qbfilter = function(key){
+
+		$scope.qbs.sort(function(a,b){
+		  if (Number(a[key]) > Number(b[key])) {
+		    return 1;
+		  }
+		  if (Number(a[key]) < Number(b[key])) {
+		    return -1;
+		  }
+		  // a must be equal to b
+		  return 0;
+		});
+
+		console.log($scope.qbs);
+
+		$state.reload();
+
+	}
 
 	RankingsFactory.fetchPos('wrs')
 	.then(function(wrs){

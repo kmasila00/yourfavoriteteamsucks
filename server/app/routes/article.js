@@ -7,7 +7,9 @@ var Article = db.model('article');
 module.exports = router;
 
 router.get('/', function(req,res,next){
-	Article.findAll()
+	Article.findAll({
+		order: '"createdAt" ASC'
+	})
 	.then(function(articles){
 		res.status(200).send(articles);
 	})

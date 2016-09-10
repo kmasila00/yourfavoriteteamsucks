@@ -28,4 +28,5 @@ app.controller('homeCtrl', function($scope, Top10Factory, ArticleFactory){
 		$scope.articles = articles.reverse();
 	})
 
+
 })

@@ -4,6 +4,9 @@ app.directive('carousel', function($rootScope, ArticleFactory){
 		restrict:'E',
 		scope: {},
 		templateUrl:'js/common/directives/carousel/carousel.html',
+		controller: function(){
+			$('.carousel').carousel()
+		},
 		link: function(scope){
 
 			var allArticles;

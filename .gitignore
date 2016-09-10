@@ -6,3 +6,5 @@ public/*.css
 .DS_Store
 coverage
 temp
+seed.js
+resetRankings.js
