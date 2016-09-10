@@ -2,13 +2,12 @@
   "apps" : [
     {
       "name"        : "YFTS",
-      "script"      : "server/start.js",
+      "script"      : "NODE_ENV=production server/start.js",
       "exec_mode"   : "cluster",
       "watch"       : true,
       "autorestart" : true,
       "env": {
         "NODE_ENV": "development",
-        "PORT": "80"
       },
       "env_production" : {
          "NODE_ENV": "production",
