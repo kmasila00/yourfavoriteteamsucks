@@ -6,8 +6,12 @@ app.config(function($stateProvider){
 
 			ArticleFactory.fetchById($stateParams.articleId)
 			.then(function(article){
-				$scope.artArr = article.Text.split("nline");
+				var artArr = article.Text.split("sbreak");
+				for(var i = 0; i < artArr.length; i++){
+					artArr[i] = artArr[i].split("nline");
+				}
 				$scope.article = article;
+				$scope.sections = artArr;
 			})
 
 		}

@@ -12,9 +12,11 @@
 		  			<p>{{ article.Date }}</p>
 	  			</center>
 	  			<hr>
-	  			<div ng-repeat="para in artArr" >
-	  				<p>{{ para }}</p>
-	  				<br>
+	  			<div ng-repeat="section in sections" >
+	  				<div ng-repeat="art in section">
+	  					<p>{{ art }}</p>
+	  				</div>
+	  				<br/>
 	  			</div>
 			  </li>
   		  </div>
