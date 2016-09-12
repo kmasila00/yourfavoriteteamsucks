@@ -5,11 +5,20 @@
 }
 
 th { 
-	
 	a {
-
 		cursor: pointer;
-
 	}
+}
 
+.table-striped > tbody > tr:nth-child(even) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: white;
+}
+
+.table > thead > tr > th {
+	background-color:white;
+}
+
+.nav-tabs > li {
+	width: 16.66666667%;
+	background-color:white;
 }
