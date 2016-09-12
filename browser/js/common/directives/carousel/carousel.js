@@ -15,13 +15,17 @@ app.directive('carousel', function($rootScope, ArticleFactory){
 
 			ArticleFactory.fetchAll()
 			.then(function(articles){
+				console.log("all", articles);
 				scope.welcome = articles[0];
 				allArticles = articles.slice(1);
+				console.log('no welcome', allArticles);
 
 				if(allArticles.length > 5){
-					cArticles = allArticles.slice(allArticles.length - 5).reverse();
+					scope.cArticles = allArticles.slice(allArticles.length - 5).reverse();
+					console.log('c', cArticles);
 				} else {
 					cArticles = allArticles.slice().reverse();
+					console.log('c', cArticles);
 					scope.cArticles = cArticles;
 				}
 
