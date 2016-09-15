@@ -136,6 +136,11 @@ app.config(function ($stateProvider) {
             $scope.nick = 0;
 
             $scope.change = function(pos, num, player, jason, jack, amoni, eddie, nick){
+                if(num === '--'){
+                  if(pos === 'wrs' || pos === 'rbs') num = 26;
+                } else {
+                  num = 21;
+                }
                 RankingsFactory.changeOne(pos, num, player, jason, jack, amoni, eddie, nick)
             }
         }
