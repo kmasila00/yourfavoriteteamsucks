@@ -9,8 +9,14 @@ app.factory('RankingsFactory', function($http){
 			.then(function(res){
 				var check = res.data;
 				for(var i = 0; i < check.length; i++){
-					for(var key in check[i]){
-						if (Number(check[i][key]) === 21 || Number(check[i][key]) === 0) check[i][key] = "--";
+					if(pos === 'qbs' || pos === 'tes' || pos === 'defs' || pos === 'ks'){
+						for(var key in check[i]){
+							if (Number(check[i][key]) === 21 || Number(check[i][key]) === 0) check[i][key] = "--";
+						}
+					} else {
+						for(var key in check[i]){
+							if (Number(check[i][key]) === 26 || Number(check[i][key]) === 0) check[i][key] = "--";
+						}
 					}
 				}
 				return res.data;
