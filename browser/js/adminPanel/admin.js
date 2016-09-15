@@ -121,6 +121,14 @@ app.config(function ($stateProvider) {
               $scope.ks = ks;
             })
 
+            $scope.obj = {
+              qb:'',
+              wr:'',
+              rb:'',
+              te:'',
+              def:'',
+              k:''
+            };
             $scope.jason = 0;
             $scope.jack = 0;
             $scope.amoni = 0;

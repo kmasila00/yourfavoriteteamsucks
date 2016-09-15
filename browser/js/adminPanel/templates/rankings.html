@@ -27,7 +27,7 @@
 			    	<tr ng-repeat="qb in qbs">
 			    		<td>{{ qb.Num }}</td>
 			    		<td ng-if="qb.Player === 'playerName'">
-			    			<input type="text" ng-model="player">
+			    			<input type="text" ng-model="obj.qb">
 			    		</td>
 			    		<td ng-if="qb.Player !== 'playerName'">
 			    			<label>{{ qb.Player }}</label>
@@ -37,7 +37,8 @@
 					    <td><input type="text" ng-model="amoni" value="100"></td>
 					    <td><input type="text" ng-model="eddie" value="100"></td>
 					    <td><input type="text" ng-model="nick" value="100"></td>
-			    		<td><button ng-click="change('qbs', qb.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="qb.Player === 'playerName'"><button ng-click="change('qbs', qb.Num, obj.qb, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="qb.Player !== 'playerName'"><button ng-click="change('qbs', qb.Num, qb.Player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
 			    	</tr>
 			    </tbody>
 			    </table>
@@ -61,7 +62,7 @@
 			    	<tr ng-repeat="wr in wrs">
 			    		<td>{{ wr.Num }}</td>
 			    		<td ng-if="wr.Player === 'playerName'">
-			    			<input type="text" ng-model="player">
+			    			<input type="text" ng-model="obj.wr">
 			    		</td>
 			    		<td ng-if="wr.Player !== 'playerName'">
 			    			<label>{{ wr.Player }}</label>
@@ -71,7 +72,8 @@
 					    <td><input type="text" ng-model="amoni"></td>
 					    <td><input type="text" ng-model="eddie"></td>
 					    <td><input type="text" ng-model="nick"></td>
-			    		<td><button ng-click="change('wrs', wr.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="wr.Player === 'playerName'"><button ng-click="change('wrs', wr.Num, obj.wr, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="wr.Player !== 'playerName'"><button ng-click="change('wrs', wr.Num, wr.Player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
 			    	</tr>
 			    </tbody>
 			    </table>
@@ -95,7 +97,7 @@
 			    	<tr ng-repeat="rb in rbs">
 			    		<td>{{ rb.Num }}</td>
 			    		<td ng-if="rb.Player === 'playerName'">
-			    			<input type="text" ng-model="player">
+			    			<input type="text" ng-model="obj.rb">
 			    		</td>
 			    		<td ng-if="rb.Player !== 'playerName'">
 			    			<label>{{ rb.Player }}</label>
@@ -105,7 +107,8 @@
 					    <td><input type="text" ng-model="amoni"></td>
 					    <td><input type="text" ng-model="eddie"></td>
 					    <td><input type="text" ng-model="nick"></td>
-			    		<td><button ng-click="change('rbs', rb.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="rb.Player === 'playerName'"><button ng-click="change('rbs', rb.Num, obj.rb, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="rb.Player !== 'playerName'"><button ng-click="change('rbs', rb.Num, rb.Player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
 			    	</tr>
 			    </tbody>
 			    </table>
@@ -129,7 +132,7 @@
 			    	<tr ng-repeat="te in tes">
 			    		<td>{{ te.Num }}</td>
 			    		<td ng-if="te.Player === 'playerName'">
-			    			<input type="text" ng-model="player">
+			    			<input type="text" ng-model="obj.te">
 			    		</td>
 			    		<td ng-if="te.Player !== 'playerName'">
 			    			<label>{{ te.Player }}</label>
@@ -139,7 +142,8 @@
 					    <td><input type="text" ng-model="amoni"></td>
 					    <td><input type="text" ng-model="eddie"></td>
 					    <td><input type="text" ng-model="nick"></td>
-			    		<td><button ng-click="change('tes', te.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="te.Player === 'playerName'"><button ng-click="change('tes', te.Num, obj.te, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="te.Player !== 'playerName'"><button ng-click="change('tes', te.Num, te.Player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
 			    	</tr>
 			    </tbody>
 			    </table>
@@ -163,7 +167,7 @@
 			    	<tr ng-repeat="def in defs">
 			    		<td>{{ def.Num }}</td>
 			    		<td ng-if="def.Player === 'playerName'">
-			    			<input type="text" ng-model="player">
+			    			<input type="text" ng-model="obj.def">
 			    		</td>
 			    		<td ng-if="def.Player !== 'playerName'">
 			    			<label>{{ def.Player }}</label>
@@ -173,7 +177,8 @@
 					    <td><input type="text" ng-model="amoni"></td>
 					    <td><input type="text" ng-model="eddie"></td>
 					    <td><input type="text" ng-model="nick"></td>
-			    		<td><button ng-click="change('defs', def.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="def.Player === 'playerName'"><button ng-click="change('defs', def.Num, obj.def, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="def.Player !== 'playerName'"><button ng-click="change('defs', def.Num, def.Player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
 			    	</tr>
 			    </tbody>
 			    </table>
@@ -197,7 +202,7 @@
 			    	<tr ng-repeat="k in ks">
 			    		<td>{{ k.Num }}</td>
 			    		<td ng-if="k.Player === 'playerName'">
-			    			<input type="text" ng-model="player">
+			    			<input type="text" ng-model="obj.k">
 			    		</td>
 			    		<td ng-if="k.Player !== 'playerName'">
 			    			<label>{{ k.Player }}</label>
@@ -207,7 +212,8 @@
 					    <td><input type="text" ng-model="amoni"></td>
 					    <td><input type="text" ng-model="eddie"></td>
 					    <td><input type="text" ng-model="nick"></td>
-			    		<td><button ng-click="change('ks', k.Num, player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="k.Player === 'playerName'"><button ng-click="change('ks', k.Num, obj.k, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
+			    		<td ng-if="k.Player !== 'playerName'"><button ng-click="change('ks', k.Num, k.Player, jason, jack, amoni, eddie, nick)" class="btn btn-primary">CONFIRM</button>
 			    	</tr>
 			    </tbody>
 			    </table>
