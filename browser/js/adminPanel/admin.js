@@ -138,8 +138,10 @@ app.config(function ($stateProvider) {
             $scope.change = function(pos, num, player, jason, jack, amoni, eddie, nick){
                 console.log(num);
                 if(num === '--'){
+                  console.log('wr')
                   if(pos === 'wrs' || pos === 'rbs') num = 26;
                 } else {
+                  console.log('in te')
                   num = 21;
                 }
                 console.log(num);
