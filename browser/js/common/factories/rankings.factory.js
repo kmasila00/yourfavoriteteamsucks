@@ -24,6 +24,7 @@ app.factory('RankingsFactory', function($http){
 		},
 
 		changeOne: function(pos,n,p,jason,jack,amoni,eddie,nick){
+			console.log('factory1', n)
 			var avg = (Number(jason) + Number(jack) + Number(amoni) + Number(eddie) + Number(nick))/5
 			return $http.put(baseUrl + pos, {Num:n, Player:p, Avg: avg, Jason:jason, Jack:jack, Amoni:amoni, Eddie:eddie, Nick:nick})
 			.then(function(res){
