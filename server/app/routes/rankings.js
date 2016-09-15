@@ -10,7 +10,8 @@ router.get('/qbs', function(req,res,next){
 	Rankings.findAll({
 		where:{
 			Pos: 'QB'
-		}
+		},
+		order: '"Avg" ASC'
 	})
 	.then(function(found){
 		res.status(200).send(found);
@@ -21,7 +22,8 @@ router.get('/wrs', function(req,res,next){
 	Rankings.findAll({
 		where:{
 			Pos: 'WR'
-		}
+		},
+		order: '"Avg" ASC'
 	})
 	.then(function(found){
 		res.status(200).send(found);
@@ -32,7 +34,8 @@ router.get('/rbs', function(req,res,next){
 	Rankings.findAll({
 		where:{
 			Pos: 'RB'
-		}
+		},
+		order: '"Avg" ASC'
 	})
 	.then(function(found){
 		res.status(200).send(found);
@@ -43,7 +46,8 @@ router.get('/tes', function(req,res,next){
 	Rankings.findAll({
 		where:{
 			Pos: 'TE'
-		}
+		},
+		order: '"Avg" ASC'
 	})
 	.then(function(found){
 		res.status(200).send(found);
@@ -54,7 +58,8 @@ router.get('/defs', function(req,res,next){
 	Rankings.findAll({
 		where:{
 			Pos: 'DEF'
-		}
+		},
+		order: '"Avg" ASC'
 	})
 	.then(function(found){
 		res.status(200).send(found);
@@ -65,7 +70,8 @@ router.get('/ks', function(req,res,next){
 	Rankings.findAll({
 		where:{
 			Pos: 'K'
-		}
+		},
+		order: '"Avg" ASC'
 	})
 	.then(function(found){
 		res.status(200).send(found);

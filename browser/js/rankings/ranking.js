@@ -12,16 +12,16 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 
 	RankingsFactory.fetchPos('qbs')
 	.then(function(qbs){
-		qbs.sort(function (a, b) {
-		  if (Number(a.Avg) > Number(b.Avg)) {
-		    return 1;
-		  }
-		  if (Number(a.Avg) < Number(b.Avg)) {
-		    return -1;
-		  }
-		  // a must be equal to b
-		  return 0;
-		});
+		// qbs.sort(function (a, b) {
+		//   if (Number(a.Avg) > Number(b.Avg)) {
+		//     return 1;
+		//   }
+		//   if (Number(a.Avg) < Number(b.Avg)) {
+		//     return -1;
+		//   }
+		//   // a must be equal to b
+		//   return 0;
+		// });
 
 		
 		for(var i = 0; i < qbs.length; i++){
@@ -31,8 +31,6 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 				break;
 			} 
 		}
-
-		console.log($scope.qbs);
 
 	})
 
@@ -57,17 +55,6 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 
 	RankingsFactory.fetchPos('wrs')
 	.then(function(wrs){
-		wrs.sort(function (a, b) {
-		  if (Number(a.Avg) > Number(b.Avg)) {
-		    return 1;
-		  }
-		  if (Number(a.Avg) < Number(b.Avg)) {
-		    return -1;
-		  }
-		  // a must be equal to b
-		  return 0;
-		});
-		
 		for(var i = 0; i < wrs.length; i++){
 			wrs[i].Rank = i+1;
 			if(Number(wrs[i].Avg) === 100){
@@ -79,17 +66,6 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 
 	RankingsFactory.fetchPos('rbs')
 	.then(function(rbs){
-		rbs.sort(function (a, b) {
-		  if (Number(a.Avg) > Number(b.Avg)) {
-		    return 1;
-		  }
-		  if (Number(a.Avg) < Number(b.Avg)) {
-		    return -1;
-		  }
-		  // a must be equal to b
-		  return 0;
-		});
-		
 		for(var i = 0; i < rbs.length; i++){
 			rbs[i].Rank = i+1;
 			if(Number(rbs[i].Avg) === 100){
@@ -101,17 +77,6 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 
 	RankingsFactory.fetchPos('tes')
 	.then(function(tes){
-		tes.sort(function (a, b) {
-		  if (Number(a.Avg) > Number(b.Avg)) {
-		    return 1;
-		  }
-		  if (Number(a.Avg) < Number(b.Avg)) {
-		    return -1;
-		  }
-		  // a must be equal to b
-		  return 0;
-		});
-		
 		for(var i = 0; i < tes.length; i++){
 			tes[i].Rank = i+1;
 			if(Number(tes[i].Avg) === 100){
@@ -123,17 +88,6 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 
 	RankingsFactory.fetchPos('defs')
 	.then(function(defs){
-		defs.sort(function (a, b) {
-		  if (Number(a.Avg) > Number(b.Avg)) {
-		    return 1;
-		  }
-		  if (Number(a.Avg) < Number(b.Avg)) {
-		    return -1;
-		  }
-		  // a must be equal to b
-		  return 0;
-		});
-		
 		for(var i = 0; i < defs.length; i++){
 			defs[i].Rank = i+1;
 			if(Number(defs[i].Avg) === 100){
@@ -145,17 +99,6 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 
 	RankingsFactory.fetchPos('ks')
 	.then(function(ks){
-		ks.sort(function (a, b) {
-		  if (Number(a.Avg) > Number(b.Avg)) {
-		    return 1;
-		  }
-		  if (Number(a.Avg) < Number(b.Avg)) {
-		    return -1;
-		  }
-		  // a must be equal to b
-		  return 0;
-		});
-		
 		for(var i = 0; i < ks.length; i++){
 			ks[i].Rank = i+1;
 			if(Number(ks[i].Avg) === 100){
