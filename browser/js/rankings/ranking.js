@@ -22,11 +22,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 		//   // a must be equal to b
 		//   return 0;
 		// });
-
 		
 		for(var i = 0; i < qbs.length; i++){
 			qbs[i].Rank = i+1;
-			if(Number(qbs[i].Avg) === 100){
+			if(qbs[i].Avg === '--'){
 				$scope.qbs = qbs.slice(0,i);
 				break;
 			} 

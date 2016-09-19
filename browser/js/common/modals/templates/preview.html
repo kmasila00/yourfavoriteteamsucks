@@ -1,0 +1,22 @@
+<div class="modal-header">
+  <h4 class="modal-title">
+    PREVIEW
+  </h4>
+</div>
+<div class="modal-body">
+  <li class="list-group-item">
+    <div ng-repeat="section in sections" >
+      <div ng-repeat="art in section">
+        <p>{{ art }}</p>
+      </div>
+      <br/>
+    </div>
+  </li>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-danger" type="button" ng-click="close()">
+    <span class="glyphicon glyphicon-remove-circle"></span>
+    CLOSE
+  </button>
+</div>

@@ -1,30 +1,31 @@
 <section id="addArt">
-	<div class="container">
+	<div style="background-color:white; padding: 15px 15px 15px 15px; margin-top:120px;" class="container">
 
 		<h1>ADD ARTICLE</h1>
 		
-	 	<form>
+	 	<form name="addArticleForm">
 		  <div class="form-group">
 		    <label for="exampleInputEmail1">Title</label>
-		    <input ng-model="title" class="form-control" placeholder="Enter title">
+		    <input ng-model="title" class="form-control" placeholder="Enter title" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">Author</label>
-		    <input ng-model="author" class="form-control" placeholder="Enter Author">
+		    <input ng-model="author" class="form-control" placeholder="Enter Author" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">Date (mm/dd/yy)</label>
-		    <input ng-model="date" class="form-control" placeholder="Enter Date">
+		    <input ng-model="date" class="form-control" placeholder="Enter Date" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">Image URL</label>
-		    <input ng-model="imageUrl" class="form-control" placeholder="Enter Image Url">
+		    <input ng-model="imageUrl" class="form-control" placeholder="Enter Image Url" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleTextarea">Text</label>
-		    <textarea ng-model="text" class="form-control" rows="3"></textarea>
+		    <textarea ng-model="text" class="form-control" rows="3" required></textarea>
 		  </div>
-		  <button ng-click="submit()" class="btn btn-primary">Submit</button>
+		  <button ng-click="submit()" ng-disabled="addArticleForm.$invalid" class="btn btn-primary">Submit</button>
+		  <button ng-click="preview()" ng-disabled="addArticleForm.$invalid" class="btn btn-primary">Preview</button>
 		</form>
 
 	</div>

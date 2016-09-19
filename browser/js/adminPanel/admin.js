@@ -18,12 +18,22 @@ app.config(function ($stateProvider) {
     $stateProvider.state('articlePost', {
         url: '/admin/article',
         templateUrl: 'js/adminPanel/templates/article.html',
-        controller: function ($scope, ArticleFactory, $state) {
+        controller: function ($scope, ArticleFactory, $state, $rootScope, $uibModal) {
           $scope.submit = function(){
             ArticleFactory.addArticle($scope.title, $scope.author, $scope.date, $scope.imageUrl, $scope.text)
             alert('Article Added!');
             $state.go('admin');
           }
+
+          $scope.preview = function() {
+            $rootScope.dbText = $scope.text.split('\n').join(' ');
+            $uibModal.open({
+              animation: true,
+              templateUrl: './js/common/modals/templates/preview.html',
+              controller: 'PreviewModalCtrl'
+            });
+          }
+
         }
     });
 
