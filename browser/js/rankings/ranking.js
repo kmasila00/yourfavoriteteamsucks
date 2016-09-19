@@ -22,10 +22,11 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 		//   // a must be equal to b
 		//   return 0;
 		// });
+		console.log(qbs);
 		
 		for(var i = 0; i < qbs.length; i++){
 			qbs[i].Rank = i+1;
-			if(qbs[i].Avg === '--'){
+			if(qbs[i].Avg === '--' || Number(qbs[i].Avg) === 100){
 				$scope.qbs = qbs.slice(0,i);
 				break;
 			} 
@@ -56,7 +57,7 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 	.then(function(wrs){
 		for(var i = 0; i < wrs.length; i++){
 			wrs[i].Rank = i+1;
-			if(Number(wrs[i].Avg) === 100){
+			if(wrs[i].Avg === '--' || Number(wrs[i].Avg) === 100){
 				$scope.wrs = wrs.slice(0,i);
 				break;
 			} 
@@ -67,7 +68,7 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 	.then(function(rbs){
 		for(var i = 0; i < rbs.length; i++){
 			rbs[i].Rank = i+1;
-			if(Number(rbs[i].Avg) === 100){
+			if(rbs[i].Avg === '--' || Number(rbs[i].Avg) === 100){
 				$scope.rbs = rbs.slice(0,i);
 				break;
 			} 
@@ -78,7 +79,7 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 	.then(function(tes){
 		for(var i = 0; i < tes.length; i++){
 			tes[i].Rank = i+1;
-			if(Number(tes[i].Avg) === 100){
+			if(tes[i].Avg === '--' || Number(tes[i].Avg) === 100){
 				$scope.tes = tes.slice(0,i);
 				break;
 			} 
@@ -89,7 +90,7 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 	.then(function(defs){
 		for(var i = 0; i < defs.length; i++){
 			defs[i].Rank = i+1;
-			if(Number(defs[i].Avg) === 100){
+			if(defs[i].Avg === '--' || Number(defs[i].Avg) === 100){
 				$scope.defs = defs.slice(0,i);
 				break;
 			} 
@@ -100,7 +101,7 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 	.then(function(ks){
 		for(var i = 0; i < ks.length; i++){
 			ks[i].Rank = i+1;
-			if(Number(ks[i].Avg) === 100){
+			if(ks[i].Avg === '--' || Number(ks[i].Avg) === 100){
 				$scope.ks = ks.slice(0,i);
 				break;
 			} 
