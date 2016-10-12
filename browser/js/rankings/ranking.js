@@ -10,6 +10,10 @@ app.controller('rankingsCtrl', function($scope, RankingsFactory, $state){
 
 	var qbs, wrs, rbs, tes, defs, k;
 
+	var h = $(window).height() - 310;
+ 	$('.tab-content').css('height', h);
+ 	$('.tab-content').css('overflow', 'auto');
+
 	RankingsFactory.fetchPos('qbs')
 	.then(function(qbs){
 		// qbs.sort(function (a, b) {

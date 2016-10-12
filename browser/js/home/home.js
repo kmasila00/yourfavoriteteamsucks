@@ -21,6 +21,9 @@ app.controller('homeCtrl', function($scope, Top10Factory, ArticleFactory){
 		  return 0;
 		});
 		$scope.list = list;
+
+		$scope.startList = list.slice(0,5);
+		$scope.sitList = list.slice(5);
 	})
 
 	ArticleFactory.fetchAll()
