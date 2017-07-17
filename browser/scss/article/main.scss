@@ -1,0 +1,19 @@
+#article {
+
+  flex: 1;
+	padding-top: 60px;
+
+  .container {
+      align-items: center;
+      width: 55%;
+  }
+
+	img {
+		display: inline;
+	}
+
+	h2 {
+		display: inline-block;
+	}
+
+}
